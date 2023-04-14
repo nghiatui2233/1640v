@@ -107,7 +107,7 @@
   ?>
 
     <form action="" method="post">
-      <h3>Create Staff</h3>
+      <h3>Edite Account</h3>
       <div class="form-group col-md-12">
         <label for="fullname">Full Name:</label>
         <input type="text" id="fullname" name="fullname" value="<?php echo $row['fullname'] ?>" required />
