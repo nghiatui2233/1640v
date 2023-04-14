@@ -100,6 +100,9 @@ if (isset($_GET['logout'])) {
               <a href="stafflist.php" data-toggle="tooltip" data-placement="bottom" title="Staff">Staff</a>
             </li>
             <li>
+              <a href="Q&A.php" data-toggle="tooltip" data-placement="bottom" title="Staff">Quality Assurance Manager</a>
+            </li>
+            <li>
               <a href="department.php" data-toggle="tooltip" data-placement="bottom" title="Staff">Department</a>
             </li>
             <li>
