@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <title>Create Post</title>
 
   <style>
     body {
@@ -134,7 +133,7 @@
   ?>
 
   <form action="" method="post">
-    <h3>Create Staff</h3>
+    <h3>Create Account</h3>
     <label for="fullname">Full Name:</label>
     <input type="text" id="fullname" name="fullname" required />
     <div class="form-group col-md-12">
