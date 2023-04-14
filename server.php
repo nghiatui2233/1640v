@@ -7,7 +7,7 @@ $email    = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'idea_management');
+$db = mysqli_connect('us-cdbr-east-06.cleardb.net', 'b68c2e8034dbed', '1a709ba9', 'heroku_5042c069d70871f');
 
 // LOGIN USER
 if (isset($_POST['login_user'])) {
