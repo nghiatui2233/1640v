@@ -1,0 +1,38 @@
+Book:
+@1.https://books.google.com.vn/books?id=7OjvOmol3CcC&printsec=frontcover&dq=php+programming+language+book+pdf&hl=en&sa=X&ved=2ahUKEwiguO2Q6PL6AhVAl1YBHT2-DNwQ6AF6BAgMEAI#v=onepage&q=php%20programming%20language%20book%20pdf&f=false
+!2.https://books.google.com.vn/books?id=cheOQeh8rk4C&printsec=frontcover&dq=e-commerce+book+pdf&hl=en&sa=X&ved=2ahUKEwivw_Xh6PL6AhWj43MBHaZwDZkQ6AF6BAgMEAI#v=onepage&q&f=false
+@3.https://books.google.com.vn/books?id=JYPEgK-1bZoC&printsec=frontcover&dq=javascript+design+patterns&hl=en&sa=X&redir_esc=y#v=onepage&q=javascript%20design%20patterns&f=false
+@4.https://books.google.com.vn/books?id=Q7utBQAAQBAJ&printsec=frontcover&dq=Guide+to+Software+Development:+Designing+and+Managing+the+Life+Cycle&hl=en&sa=X&ved=2ahUKEwjf6ZP9_vr6AhWupVYBHRblDncQ6AF6BAgPEAI#v=onepage&q=Guide%20to%20Software%20Development%3A%20Designing%20and%20Managing%20the%20Life%20Cycle&f=false
+@5.https://books.google.com.vn/books?id=XaDNBgAAQBAJ&printsec=frontcover&dq=database+PG&hl=en&sa=X&redir_esc=y#v=onepage&q=database%20PG&f=false
+
+
+
+
+Articles:   
+!1. https://web.archive.org/web/20190303075149id_/http://pdfs.semanticscholar.org/c563/cfa7888f0e08043a2efe9ff1b7759832f8b0.pdf
+!2. https://www.researchgate.net/publication/281443773_Trends_in_e-commerce_for_the_food_marketing_system
+@3. https://www.researchgate.net/publication/2359510_Database_Design_for_Real-World_E-Commerce_Systems
+#4. https://dl.acm.org/doi/pdf/10.1145/336992.337035
+$5. https://www.researchgate.net/publication/360675849_Online_food_delivery_A_systematic_synthesis_of_literature_and_a_framework_development
+
+
+
+$Identifying the problem:
+https://www.researchgate.net/publication/360675849_Online_food_delivery_A_systematic_synthesis_of_literature_and_a_framework_development
+
+
+!E-commerce and projects: 
+1: https://books.google.com.vn/books?id=cheOQeh8rk4C&printsec=frontcover&dq=e-commerce+book+pdf&hl=en&sa=X&ved=2ahUKEwivw_Xh6PL6AhWj43MBHaZwDZkQ6AF6BAgMEAI#v=onepage&q&f=false
+2. https://www.researchgate.net/publication/281443773_Trends_in_e-commerce_for_the_food_marketing_system
+3. https://web.archive.org/web/20190303075149id_/http://pdfs.semanticscholar.org/c563/cfa7888f0e08043a2efe9ff1b7759832f8b0.pdf
+
+@E-commerce development:
+1.https://books.google.com.vn/books?id=7OjvOmol3CcC&printsec=frontcover&dq=php+programming+language+book+pdf&hl=en&sa=X&ved=2ahUKEwiguO2Q6PL6AhVAl1YBHT2-DNwQ6AF6BAgMEAI#v=onepage&q=php%20programming%20language%20book%20pdf&f=false
+2.https://books.google.com.vn/books?id=JYPEgK-1bZoC&printsec=frontcover&dq=javascript+design+patterns&hl=en&sa=X&redir_esc=y#v=onepage&q=javascript%20design%20patterns&f=false
+3.https://books.google.com.vn/books?id=Q7utBQAAQBAJ&printsec=frontcover&dq=Guide+to+Software+Development:+Designing+and+Managing+the+Life+Cycle&hl=en&sa=X&ved=2ahUKEwjf6ZP9_vr6AhWupVYBHRblDncQ6AF6BAgPEAI#v=onepage&q=Guide%20to%20Software%20Development%3A%20Designing%20and%20Managing%20the%20Life%20Cycle&f=false
+4.https://books.google.com.vn/books?id=XaDNBgAAQBAJ&printsec=frontcover&dq=database+PG&hl=en&sa=X&redir_esc=y#v=onepage&q=database%20PG&f=false
+5.https://www.researchgate.net/publication/2359510_Database_Design_for_Real-World_E-Commerce_Systems
+
+
+#Suggestion system:
+1.https://dl.acm.org/doi/pdf/10.1145/336992.337035

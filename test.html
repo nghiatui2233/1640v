@@ -1,0 +1,68 @@
+<style>
+  .notification {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .notification:hover {
+    background-color: #f5f5f5;
+  }
+
+  .notification .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f44336;
+    margin-right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .notification .icon i {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .notification .content p {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .notification .content .timestamp {
+    font-size: 12px;
+    color: #999;
+  }
+</style>
+
+<div class="notification">
+  <div class="icon">
+    <i class="fa fa-bell"></i>
+  </div>
+  <div class="content">
+    <p>You have a new notification</p>
+    <span class="timestamp">5 minutes ago</span>
+  </div>
+</div>
+
+<script>
+  var notification = document.querySelector(".notification");
+  var count = 0;
+
+  function showNotification() {
+    notification.style.display = "block";
+    count++;
+    notification.querySelector("p").textContent =
+      "You have " + count + " new notifications";
+  }
+
+  function hideNotification() {
+    notification.style.display = "none";
+    count = 0;
+  }
+
+  notification.addEventListener("click", hideNotification);
+</script>

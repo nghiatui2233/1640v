@@ -1,0 +1,43 @@
+.comment-container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.comment-container h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.comment-container form input,
+.comment-container form textarea,
+.comment-container form button {
+	display: block;
+	margin-bottom: 10px;
+	padding: 10px;
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.comment-container form button {
+	background-color: #3b5998;
+	color: #fff;
+	cursor: pointer;
+}
+
+.comment-container .comment {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.comment-container .comment p {
+	margin: 0;
+}
+
+.comment-container .comment .name {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
