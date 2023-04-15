@@ -79,16 +79,7 @@ if (isset($_POST['postIdea'])) {
     VALUES ('$id', '$anonymous', '$feedback', '$file_name', '$target_file', '$department', '$account', '0')";
 
       mysqli_query($conn, $sql);
-      echo "<script>
-      $(document).ready(function() { 
-      swal({
-        title: 'Success!',
-        text: 'Add success!',
-        icon: 'error',
-        button: 'OK',
-      })
-      });
-      </script>";
+echo '<meta http-equiv="refresh" content="0;URL =index.php"/>';
     }
   } else {
     $anonymous = $_POST['anonymous'];
