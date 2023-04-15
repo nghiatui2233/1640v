@@ -62,7 +62,18 @@ if (isset($_POST['postIdea'])) {
     mysqli_query($conn, $sql);
 
 
-} else {
+}elseif ($target_file != $allowed_types){
+    echo "<script>
+    $(document).ready(function() { 
+    swal({
+      title: 'Fail!',
+      text: 'The file is in the wrong format!',
+      icon: 'error',
+      button: 'OK',
+    })
+    });
+    </script>";
+  }else {
     $anonymous = $_POST['anonymous'];
     $feedback = $_POST['feedback'];
 
