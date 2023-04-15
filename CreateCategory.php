@@ -52,7 +52,7 @@
 </head>
 <?php include_once "header.php" ?>
 <body>
-	<h1>Add Category</h1>
+	<h1>Create Category</h1>
 	<form method="post" action="">
 		<label for="categoryName">Category Name:</label>
 		<input type="text" name="categoryName" required><br><br>
