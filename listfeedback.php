@@ -158,7 +158,7 @@ if (isset($_GET["function"]) == "del") {
         $id = $_GET["id"];
         $sql = "SELECT * FROM tbl_feedback";
         mysqli_query($conn, "DELETE FROM tbl_feedback WHERE feedback_Id='$id'");
-        echo '<meta http-equiv="refresh" content="0;URL =listfeedback.php?id=29"/>';
+            echo '<meta http-equiv="refresh" content="0; '.$_SERVER['HTTP_REFERER'].'">';
     }
 }
 if (isset($_GET['id'])) {
