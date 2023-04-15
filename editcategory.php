@@ -55,6 +55,19 @@
 		input[type="submit"]:hover {
 			background-color: #555;
 		}
+			input[type='button'] {
+		      background-color: #333;
+		      color: #fff;
+		      padding: 10px 20px;
+		      border: none;
+		      border-radius: 5px;
+		      font-size: 16px;
+		      cursor: pointer;
+		    }
+
+		    input[type='button']:hover {
+		      background-color: #555;
+		    }	
 	</style>
 </head>
 
@@ -73,13 +86,7 @@
 			<label for="categoryName">Category Name:</label>
 			<input type="text" name="categoryName" value="<?php echo $row["categoryName"] ?>" required><br>
 			<input type="submit" class="site-btn" name="btnUpdate" id="btnUpdate" value="Update" />
-			<button style="    background-color: #333; 
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;" type="button" onclick="window.location='categorylist.php'">Cancel </button>
+			<input type="button" onclick="window.location='categorylist.php'" value="Cancel">
 	<?php }?>
 	</form>
 <?php
