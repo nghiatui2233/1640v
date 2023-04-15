@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<?php include_once "header.php" ?>
 <head>
 	<title>Add Category</title>
 	<style>
@@ -114,5 +114,5 @@
 ?>
 
 </body>
-
+<?php include_once "footer.php" ?>
 </html>
