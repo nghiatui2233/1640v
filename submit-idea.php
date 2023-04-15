@@ -58,26 +58,25 @@ if (isset($_POST['postIdea'])) {
     // Lấy các giá trị từ biểu mẫu
     $anonymous = $_POST['anonymous'];
     $feedback = $_POST['feedback'];
-
-    // Thêm thông tin vào cơ sở dữ liệu
-    $sql = "INSERT INTO tbl_feedback (post_Id, anonymous, feedback, file_name, file_path, department_Id, account_Id, likes) 
+    if ($target_file != $allowed_types) {
+      echo "<script>
+      $(document).ready(function() { 
+      swal({
+        title: 'Fail!',
+        text: 'The file is in the wrong format!',
+        icon: 'error',
+        button: 'OK',
+      })
+      });
+      </script>";
+    } else {
+      // Thêm thông tin vào cơ sở dữ liệu
+      $sql = "INSERT INTO tbl_feedback (post_Id, anonymous, feedback, file_name, file_path, department_Id, account_Id, likes) 
     VALUES ('$id', '$anonymous', '$feedback', '$file_name', '$target_file', '$department', '$account', '0')";
 
-    mysqli_query($conn, $sql);
-
-
-}elseif ($target_file != $allowed_types){
-    echo "<script>
-    $(document).ready(function() { 
-    swal({
-      title: 'Fail!',
-      text: 'The file is in the wrong format!',
-      icon: 'error',
-      button: 'OK',
-    })
-    });
-    </script>";
-  }else {
+      mysqli_query($conn, $sql);
+    }
+  } else {
     $anonymous = $_POST['anonymous'];
     $feedback = $_POST['feedback'];
 
@@ -85,7 +84,18 @@ if (isset($_POST['postIdea'])) {
     $sql = "INSERT INTO tbl_feedback (post_Id, anonymous, feedback, department_Id, account_Id, likes) 
     VALUES ('$id', '$anonymous', '$feedback', '$department', '$account', '0')";
 
-    mysqli_query($conn, $sql);
+    if(mysqli_query($conn, $sql)){
+          echo "<script>
+    $(document).ready(function() { 
+    swal({
+      title: 'Success!',
+      text: 'Submit Success!',
+      icon: 'error',
+      button: 'OK',
+    })
+    });
+    </script>";
+    }
   }
 
   // Đóng kết nối đến cơ sở dữ liệu
