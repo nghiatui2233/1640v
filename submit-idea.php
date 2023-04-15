@@ -62,8 +62,15 @@ if (isset($_POST['postIdea'])) {
     mysqli_query($conn, $sql);
 
 
-  } else {
-    echo "Lỗi khi tải lên tệp tin.";
+} else {
+    $anonymous = $_POST['anonymous'];
+    $feedback = $_POST['feedback'];
+
+    // Thêm thông tin vào cơ sở dữ liệu
+    $sql = "INSERT INTO tbl_feedback (post_Id, anonymous, feedback, department_Id, account_Id, likes) 
+    VALUES ('$id', '$anonymous', '$feedback', '$department', '$account', '0')";
+
+    mysqli_query($conn, $sql);
   }
 
   // Đóng kết nối đến cơ sở dữ liệu
