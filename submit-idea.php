@@ -50,7 +50,10 @@ if (isset($_POST['postIdea'])) {
   $target_file = $target_dir . basename($file_name);
 
   // Mảng các loại file được phép tải lên
-  $allowed_types = array('application/pdf', 'application/docx', 'image/jpeg', 'image/png', 'image/gif', 'text/plain');
+  $allowed_types = array(
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/pdf', 'text/plain',
+    'application/msword', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+  );
 
 
   // Di chuyển file từ thư mục tạm đến thư mục lưu trữ trên server
