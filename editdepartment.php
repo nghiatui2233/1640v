@@ -73,13 +73,7 @@
 			<label for="departmentName">Department Name:</label>
 			<input type="text" name="departmentName" value="<?php echo $row["departmentName"] ?>" required><br>
 			<input type="submit" class="site-btn" name="btnUpdate" id="btnUpdate" value="Update" />
-			<button style="    background-color: #333; 
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;" type="button" onclick="window.location='department.php'">Cancel </button>
+		 <input type="button" value="Cancel" onclick="window.location='department.php'" />
 	<?php }?>
 	</form>
 <?php
