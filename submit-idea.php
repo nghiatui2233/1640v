@@ -20,11 +20,15 @@ if (isset($_GET['id'])) {
       <div class="half left cf">
         <label class="input-title" for="input-title">Title:</label>
         <input type="text" name="" id="input-name" value="<?php echo $row['title']; ?>" />
+        <label class="input-title" for="input-title">Upload FIle (pdf or docx):</label>
         <input type="file" name="file" id="input-subject" />
+        <label class="input-title" for="input-title">Incognito mode:</label>
         <select id="input-select" name="anonymous">
           <option value="anonymous">Ẩn danh</option>
           <option value="<?php echo $row2['fullname']; ?>">Tên</option>
         </select>
+        </br>
+        <label class="input-title" for="input-title">Feedback:</label>
       </div>
       <textarea name="feedback" type="text" id="input-message" placeholder="Message"></textarea>
       <input type="submit" value="Submit" name="postIdea" id="input-submit" />
