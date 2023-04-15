@@ -72,7 +72,7 @@
 
 			<label for="categoryName">Department Name:</label>
 			<input type="text" name="departmentName" value="<?php echo $row["departmentName"] ?>" required><br>
-			<input type="submit" class="site-btn" name="btnUpdate" id="btnUpdate" value="Update" />
+			<input type="submit" class="site-btn" name="btnUpdate" id="btnUpdate" value="Update">
 			<button style="    background-color: #333; 
     color: #fff;
     padding: 10px 20px;
@@ -114,5 +114,5 @@
 ?>
 
 </body>
-<?php include_once "header.php";?>
+<?php include_once "footer.php";?>
 </html>
