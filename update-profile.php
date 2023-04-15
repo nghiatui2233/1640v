@@ -158,7 +158,7 @@
         <input type="text" id="phonenumber" name="phonenumber" required value="<?php echo $row['phone'] ?>" />
       </div>
       <br />
-      <input type="submit" name="btnUpdate" value="Add" />
+      <input type="submit" name="btnUpdate" value="Update" />
       <input type="button" value="Cancel" onclick="window.location='index.php'" />
     </form>
   <?php
@@ -180,7 +180,16 @@
 
       if (mysqli_query($conn, $sqlstring)) {
         // Hiển thị thông báo thành công
-        echo '<meta http-equiv="refresh" content="0;"';
+echo "<script>
+	$(document).ready(function() { 
+	swal({
+	  title: 'Susscess!',
+	  text: 'Update successfully!',
+	  icon: 'susscess',
+	  button: 'OK',
+	})
+	});
+	</script>";
       } else {
         // Hiển thị thông báo lỗi
         echo "<script>
