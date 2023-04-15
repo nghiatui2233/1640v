@@ -9,7 +9,7 @@ include_once("config.php"); ?>
 
   <form action=""></form>
   <b>Main Function:</b><br />
-  <button onclick="window.location='CreateStaff.php'" class="nv btn add-new" type="button" data-toggle="tooltip" data-placement="top" title="Add Staff">
+  <button onclick="window.location='CreateStaff.php'" class="nv btn add-new" type="button" data-toggle="tooltip" data-placement="top" title="Add Account">
     <i class="fas fa-user-plus" aria-hidden="true"></i>
   </button>
     <div class="table-title">
