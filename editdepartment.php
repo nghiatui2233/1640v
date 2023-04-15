@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Add Category</title>
+	<title>Add Department</title>
 	<style>
 		body {
 			font-family: Arial, sans-serif;
@@ -59,7 +59,7 @@
 </head>
 	<?php include_once "header.php";?>
 <body>
-	<h1>Edit Category</h1>
+	<h1>Edit Department</h1>
 	<form method="post" action="">
 		<?php
 		include_once("config.php");
@@ -70,9 +70,9 @@
 			$row = mysqli_fetch_array($result);
 		?>
 
-			<label for="categoryName">Department Name:</label>
+			<label for="departmentName">Department Name:</label>
 			<input type="text" name="departmentName" value="<?php echo $row["departmentName"] ?>" required><br>
-			<input type="submit" class="site-btn" name="btnUpdate" id="btnUpdate" value="Update">
+			<input type="submit" class="site-btn" name="btnUpdate" id="btnUpdate" value="Update" />
 			<button style="    background-color: #333; 
     color: #fff;
     padding: 10px 20px;
