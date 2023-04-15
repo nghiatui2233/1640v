@@ -57,7 +57,7 @@
 		}
 	</style>
 </head>
-
+	<?php include_once "header.php";?>
 <body>
 	<h1>Edit Category</h1>
 	<form method="post" action="">
@@ -114,5 +114,5 @@
 ?>
 
 </body>
-
+<?php include_once "header.php";?>
 </html>
