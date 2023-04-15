@@ -52,7 +52,7 @@
 </head>
 	  <?php include_once "header.php";?>
 <body>
-	<h1>Create Department</h1>
+	<h1>Add Department</h1>
 	<form method="post" action="">
 		<label for="departmentName">Department Name:</label>
 		<input type="text" name="departmentName" required><br><br>
