@@ -1,4 +1,5 @@
-<?php include_once "header.php" ?>
+<?php
+ include_once "header.php" ?>
 <!DOCTYPE html>
 <html>
 
@@ -90,6 +91,12 @@
       font-size: 20px;
       cursor: pointer;
     }
+
+    .a {
+      float: right;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
   </style>
 </head>
 
@@ -160,14 +167,28 @@ if (isset($_GET['id'])) {
                 AND tc.feedback_Id = '$id'";
 
 
-        $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($conn, $sql);  
+        if (isset($_GET["function"]) && $_GET["function"] == "del") {
+          if (isset($_GET["id"])) {
+            $id = $_GET["id"];
+            mysqli_query($conn, "DELETE FROM tbl_comment WHERE comment_Id='$id'");
+            echo '<meta http-equiv="refresh" content="0; '.$_SERVER['HTTP_REFERER'].'">';
+
+          }
+        }
+        
+
         while ($row = mysqli_fetch_array($result)) {
         ?>
           <div style="display:flex; justify-content:space-between;">
             <div style="text-align:left;"> <?php echo $row['fullname']; ?></div>
             <div style="text-align:right;"><?php echo $row['date_comment']; ?></div>
           </div>
-          <input type="text" readonly value="<?php echo $row['content']; ?>">
+          <div style="display:flex; justify-content:space-between;">
+            <input type="text" readonly value="<?php echo $row['content']; ?>">
+            <a class="a" href="?&&function=del&&id=<?php echo $row["comment_Id"]; ?>">
+              <span style="color: red; font-size:20px; " class="fas fa-trash"></span></a>
+          </div>
         <?php
         }
         ?>
