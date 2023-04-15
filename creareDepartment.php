@@ -25,6 +25,19 @@
 			font-size: 16px;
 			font-weight: bold;
 		}
+		    input[type='button'] {
+		      background-color: #333;
+		      color: #fff;
+		      padding: 10px 20px;
+		      border: none;
+		      border-radius: 5px;
+		      font-size: 16px;
+		      cursor: pointer;
+		    }
+
+		    input[type='button']:hover {
+		      background-color: #555;
+		    }
 		input[type="text"] {
 			display: block;
 			box-sizing: border-box;
