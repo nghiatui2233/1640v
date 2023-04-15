@@ -3,9 +3,9 @@ include_once("config.php"); ?>
 <div class="container-fluid al">
   <div id="clock"></div>
   <br />
-  <p class="timkiemnhanvien"><b>Search Staff:</b></p>
+  <p class="timkiemnhanvien"><b>Search QA:</b></p>
   <br /><br />
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter staff name..." /><i class="" aria-hidden="true"></i>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter QA name..." /><i class="" aria-hidden="true"></i>
 
   <form action=""></form>
   <b>Main Function:</b><br />
