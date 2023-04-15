@@ -10,7 +10,7 @@
 
   <form action=""></form>
   <b>Main Function:</b><br />
-  <button onclick="window.location='creareDepartment.php'" class="nv btn add-new" type="button" data-toggle="tooltip" data-placement="top" title="Add Post">
+  <button onclick="window.location='creareDepartment.php'" class="nv btn add-new" type="button" data-toggle="tooltip" data-placement="top" title="Add Department">
     <i class="fas fa-user-plus" aria-hidden="true"></i>
   </button>
 
