@@ -48,6 +48,19 @@
 		input[type="submit"]:hover {
 			background-color: #555;
 		}
+		    input[type='button'] {
+		      background-color: #333;
+		      color: #fff;
+		      padding: 10px 20px;
+		      border: none;
+		      border-radius: 5px;
+		      font-size: 16px;
+		      cursor: pointer;
+		    }
+
+		    input[type='button']:hover {
+		      background-color: #555;
+		    }						
 	</style>
 </head>
 <?php include_once "header.php" ?>
@@ -57,14 +70,7 @@
 		<label for="categoryName">Category Name:</label>
 		<input type="text" name="categoryName" required><br><br>
 		<input type="submit" id="category_Id"name="submit" value="Add Category">
-		<button    style="    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;"     onclick="window.location='categorylist.php'"
->Cancel </button>
+		<input type="button" value="Cancel" onclick="window.location='categorylist.php'">
 	</form>
 	<?php
 	// Check if the form was submitted
