@@ -100,10 +100,10 @@ if (isset($_GET['logout'])) {
               <a href="stafflist.php" data-toggle="tooltip" data-placement="bottom" title="Staff">Staff</a>
             </li>
             <li>
-              <a href="Q&A.php" data-toggle="tooltip" data-placement="bottom" title="Staff">Quality Assurance Manager</a>
+              <a href="Q&A.php" data-toggle="tooltip" data-placement="bottom" title="Quality Assurance Manager">Quality Assurance Manager</a>
             </li>
             <li>
-              <a href="department.php" data-toggle="tooltip" data-placement="bottom" title="Staff">Department</a>
+              <a href="department.php" data-toggle="tooltip" data-placement="bottom" title="Department">Department</a>
             </li>
             <li>
               <a href="#" data-toggle="tooltip" data-placement="bottom"><b>
