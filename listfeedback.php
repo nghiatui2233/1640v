@@ -125,6 +125,11 @@
         resize: none;
     }
 
+    .a {
+        float: right;
+       margin-top: 25px;
+    }
+
     .scroll-btn {
         position: fixed;
         top: 100px;
@@ -148,6 +153,14 @@ if (isset($_SESSION["username"])) {
     $result = mysqli_query($conn, $sqlString);
     $row2 = mysqli_fetch_array($result);
 }
+if (isset($_GET["function"]) == "del") {
+    if (isset($_GET["id"])) {
+        $id = $_GET["id"];
+        $sql = "SELECT * FROM tbl_feedback";
+        mysqli_query($conn, "DELETE FROM tbl_feedback WHERE feedback_Id='$id'");
+        echo '<meta http-equiv="refresh" content="0;URL =listfeedback.php?id=29"/>';
+    }
+}
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
@@ -165,28 +178,28 @@ ORDER BY tbl_feedback.likes DESC
 
             <body>
                 <div class="container">
-
-                    <h1><strong>Post title: <?php echo $row['title']  ?></strong></h1>
-                    <form method="POST" enctype="multipart/form-data">
-                        <div class="half left cf">
-                            <input type="text" name="" id="input-name" readonly value="<?php echo $row['anonymous']; ?>" />
+                    <a class="a" href="?&&function=del&&id=<?php echo $row["feedback_Id"]; ?>"><span style="color: red; " class="fas fa-trash" style="color:black"></span></a>
+                        <h1><strong>Post title: <?php echo $row['title']  ?></strong></h1>
+                        <form method="POST" enctype="multipart/form-data">
+                            <div class="half left cf">
+                                <input type="text" name="" id="input-name" readonly value="<?php echo $row['anonymous']; ?>" />
+                            </div>
+                            <textarea name="feedback" type="text" id="input-message" placeholder="Message" readonly><?php echo $row['feedback']; ?></textarea>
+                            <?php
+                            if ($row2["role"] == 1) {
+                            ?>
+                                <button class="button-download">
+                                    <a href="<?php echo $row['file_path']; ?>" download="<?php echo $row['file_name']; ?>" style="color: #fff;">Download file</a>
+                                </button>
+                            <?php
+                            }
+                            ?>
+                        </form>
+                        <br>
+                        <div class="actions">
+                            <button id="view-more" class="button" onclick="window.location='comment.php?id=<?php echo $row['feedback_Id']; ?>'">Comment</button>
+                            <button class="button"><i class='fas fa-solid fa-thumbs-up'></i>: <?php echo $row['likes'] ?></button>
                         </div>
-                        <textarea name="feedback" type="text" id="input-message" placeholder="Message" readonly><?php echo $row['feedback']; ?></textarea>
-                        <?php
-                        if ($row2["role"] == 1) {
-                        ?>
-                            <button class="button-download">
-                                <a href="<?php echo $row['file_path']; ?>" download="<?php echo $row['file_name']; ?>" style="color: #fff;">Download file</a>
-                            </button>
-                        <?php
-                        }
-                        ?>
-                    </form>
-                    <br>
-                    <div class="actions">
-                        <button id="view-more" class="button" onclick="window.location='comment.php?id=<?php echo $row['feedback_Id']; ?>'">Comment</button>
-                        <button class="button"><i class='fas fa-solid fa-thumbs-up'></i>: <?php echo $row['likes'] ?></button>
-                    </div>
                 </div>
             </body>
         <?php }
