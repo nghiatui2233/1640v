@@ -130,7 +130,7 @@
     <form action="" method="post" enctype="multipart/form-data">
       <h3>Edit Post</h3>
       <label for="title">Title:</label>
-      <input type="text" id="title" name="title" value=<?php echo $row["title"] ?> required />
+      <input type="text" id="title" name="title" value="<?php echo $row["title"] ?>" required />
 
       <div class="form-group col-md-12">
         <label for="exampleSelect1" class="control-label">Category</label>
