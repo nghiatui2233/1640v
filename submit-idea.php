@@ -54,11 +54,12 @@ if (isset($_POST['postIdea'])) {
 
 
   // Di chuyển file từ thư mục tạm đến thư mục lưu trữ trên server
-  if (move_uploaded_file($temp_file, $target_file)) {
+ if (move_uploaded_file($temp_file, $target_file)) {
     // Lấy các giá trị từ biểu mẫu
     $anonymous = $_POST['anonymous'];
     $feedback = $_POST['feedback'];
-    if ($target_file != $allowed_types) {
+    $file_mime_type = mime_content_type($target_file);
+    if (!in_array($file_mime_type, $allowed_types)) {
       echo "<script>
       $(document).ready(function() { 
       swal({
@@ -75,6 +76,16 @@ if (isset($_POST['postIdea'])) {
     VALUES ('$id', '$anonymous', '$feedback', '$file_name', '$target_file', '$department', '$account', '0')";
 
       mysqli_query($conn, $sql);
+      echo "<script>
+      $(document).ready(function() { 
+      swal({
+        title: 'Success!',
+        text: 'Add success!',
+        icon: 'error',
+        button: 'OK',
+      })
+      });
+      </script>";
     }
   } else {
     $anonymous = $_POST['anonymous'];
