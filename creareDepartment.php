@@ -57,14 +57,7 @@
 		<label for="departmentName">Department Name:</label>
 		<input type="text" name="departmentName" required><br><br>
 		<input type="submit" name="submit" value="Add Department">
-		<button    style="    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;"     onclick="window.location='department.php'"
->Cancel </button>
+		 <input type="button" value="Cancel" onclick="window.location='department.php'" />
 	</form>
 	<?php
 	// Check if the form was submitted
