@@ -50,6 +50,7 @@
 		}
 	</style>
 </head>
+<?php include_once "header.php" ?>
 <body>
 	<h1>Add Category</h1>
 	<form method="post" action="">
@@ -99,4 +100,5 @@ if (mysqli_query($conn, $sql)) {
 	}
 	?>
 </body>
+<?php include_once "footer.php" ?>
 </html>
