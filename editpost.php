@@ -142,7 +142,7 @@
         <input type="datetime-local" id="enddate" name="enddate" value="<?php echo $row["date_ending"] ?>" />
       </div>
       <div class="form-group col-md-12">
-        <label for="enddate">End submit :</label>
+        <label for="enddate">End comment :</label>
         <input type="datetime-local" id="enddate" name="date_end_read" value="<?php echo $row["date_end_read"] ?>" />
       </div>
       <label for="content">Content:</label>
