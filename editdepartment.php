@@ -106,7 +106,7 @@
 					$(document).ready(function() { 
 					swal({
 					  title: 'Susscess!',
-					  text: 'Category update successfully!',
+					  text: 'Department update successfully!',
 					  icon: 'susscess',
 					  button: 'OK',
 					})
