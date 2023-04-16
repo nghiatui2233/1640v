@@ -216,7 +216,7 @@
         $(document).ready(function() { 
         swal({
           title: 'Susscess!',
-          text: 'Add Susscess',
+          text: 'Update Susscess',
           icon: 'susscess',
           button: 'OK',
         })
