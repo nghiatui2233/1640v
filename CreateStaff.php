@@ -180,7 +180,7 @@
 
     <br />
     <input type="submit" name="btnAdd" value="Add" />
-    <input type="submit" value="Cancel" onclick="history.back()" />
+    <input type="submit" value="Cancel" onclick="window.location='stafflist.php'" />
   </form>
 </body>
 
