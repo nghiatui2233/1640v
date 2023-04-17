@@ -29,7 +29,7 @@
     </thead>
     <?php //del button on pm 
     include_once("config.php");
-    if (isset($_GET["function"]) == "del") {
+    if (isset($_GET["function"]) && $_GET["function"] == "del") {
       if (isset($_GET["id"])) {
         $id = $_GET["id"];
         $sql = "SELECT post_Id(s)
