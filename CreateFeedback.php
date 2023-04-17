@@ -120,7 +120,7 @@
     $date_end_read = $_POST['enddatecmt'];
     $err = "";
 
-    $sqlstring = "INSERT INTO tbl_post (title, content, date_ending, category_Id, department_Id, account_Id,date_end_read) VALUES ('$title','$content','$date_ending','$category','$department','$account_Id','$date_end_read')";
+    $sqlstring = "INSERT INTO tbl_post (title, content, date_ending, category_Id, department_Id, account_Id,date_end_read, active) VALUES ('$title','$content','$date_ending','$category','$department','$account_Id','$date_end_read','1')";
     if (mysqli_query($conn, $sqlstring)) {
       echo "<script>
       $(document).ready(function() { 
