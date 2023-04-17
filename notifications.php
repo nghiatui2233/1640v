@@ -92,7 +92,7 @@ if (isset($_SESSION["username"])) {
 }
 
 // Use a JOIN to get the comments from all users in the same department
-$find_notifications = "SELECT c.*, a.fullname FROM tbl_comment c JOIN tbl_account a ON c.account_Id = a.account_Id WHERE a.department_Id = $department_id";
+$find_notifications = "SELECT c.*, a.fullname FROM tbl_comment c JOIN tbl_account a ON c.account_Id = a.account_Id WHERE a.department_Id = $department_id AND active = 1";
 
 $result = mysqli_query($conn, $find_notifications);
 $count_active = '';
@@ -111,7 +111,7 @@ while ($rows = mysqli_fetch_assoc($result)) {
 
 
 // Use a JOIN to get the post from all users in the same department
-$find_post = "SELECT p.*, a.fullname  FROM tbl_post p JOIN tbl_account a ON p.account_Id = a.account_Id WHERE a.department_Id = $department_id";
+$find_post = "SELECT p.*, a.fullname  FROM tbl_post p JOIN tbl_account a ON p.account_Id = a.account_Id WHERE a.department_Id = $department_id AND active = 1";
 
 $result1 = mysqli_query($conn, $find_post);
 $count_active1 = '';
