@@ -216,7 +216,7 @@ if (isset($_POST['submit'])) {
   // Check if content is not empty
   if (!empty($content)) {
     // Prepare the INSERT statement
-    $sql = "INSERT INTO tbl_comment (content, feedback_Id, account_Id,active,date_commnet) VALUES ('$content','$id','$account','1','".date('Y-m-d H:i:s')."')";
+    $sql = "INSERT INTO tbl_comment (content, feedback_Id, account_Id,active,date_comment) VALUES ('$content','$id','$account','1','".date('Y-m-d H:i:s')."')";
 
     if (mysqli_query($conn, $sql)) {
       echo '<meta http-equiv="refresh" content="0;"';
