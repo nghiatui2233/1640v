@@ -156,8 +156,8 @@ if (isset($_GET['id'])) {
         <input type="file" name="file" id="input-subject" />
         <label class="input-title" for="input-title">Incognito mode:</label>
         <select id="input-select" name="anonymous">
-          <option value="anonymous">Ẩn danh</option>
-          <option value="<?php echo $row2['fullname']; ?>">Tên</option>
+          <option value="anonymous">Anonymous</option>
+          <option value="<?php echo $row2['fullname']; ?>">Name</option>
         </select>
         </br>
         <label class="input-title" for="input-title">Feedback:</label>
