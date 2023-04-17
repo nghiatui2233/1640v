@@ -164,7 +164,7 @@ if (isset($_GET['id'])) {
       </div>
       <textarea name="feedback" type="text" id="input-message" placeholder="Message"></textarea>
       <br>
-        <label style="text-align: center;" for="agree">I will accept all terms</label>
+        <label style="text-align: center;" for="agree">Click here before submitting</label>
         <input type="checkbox" id="agree" onchange="showDialog()">
       <input type="submit" id="submitButton" value="Submit" name="postIdea" disabled>
     </form>
