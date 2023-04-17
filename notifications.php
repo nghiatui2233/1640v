@@ -146,7 +146,7 @@ $count = $count_active = mysqli_num_rows($result) + $count_active1 = mysqli_num_
                                     <span class="name"><?php echo $list_rows['fullname']; ?></span>
                                     <span class="text1">Commented on the post with the content</span>
                                     <span class="text">"<?php echo $list_rows['content']; ?>"</span>
-                                    <span class="time">
+                                                                       <span class="time">
                                         <?php
                                         date_default_timezone_set('Asia/Ho_Chi_Minh'); // Đặt múi giờ thành giờ của Việt Nam
                                         $saved_time = $list_rows['date_comment'];
