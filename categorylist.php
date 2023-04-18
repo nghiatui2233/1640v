@@ -24,7 +24,7 @@
       </tr>
     </thead>
     <tbody>
-      <?php //del button on pm 
+      <?php //del button
       include_once("config.php");
       if (isset($_GET["function"]) == "del") {
         if (isset($_GET["id"])) {
