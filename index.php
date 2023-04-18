@@ -68,9 +68,8 @@
           <td style="text-align: center;">
             <?php
 
-            // Kiểm tra date_end với ngày hiện tại
             date_default_timezone_set('Asia/Ho_Chi_Minh');
-            $timestamp = time() + 7 * 60 * 60; // Cộng thêm 7 giờ để đổi sang múi giờ GMT+7
+            $timestamp = time() + 7 * 60 * 60;
             if (strtotime($row["date_ending"]) >= $timestamp) {
             ?>
 
@@ -92,9 +91,8 @@
           <td style="text-align: center;">
             <?php
 
-            // Kiểm tra date_end với ngày hiện tại
             date_default_timezone_set('Asia/Ho_Chi_Minh');
-            $timestamp = time() + 7 * 60 * 60; // Cộng thêm 7 giờ để đổi sang múi giờ GMT+7
+            $timestamp = time() + 7 * 60 * 60;
             if (strtotime($row["date_end_read"]) >= $timestamp) {
             ?>
 
