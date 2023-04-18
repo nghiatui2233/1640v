@@ -101,7 +101,7 @@
 <body>
 
   <?php
-  include_once("config.php"); // Kết nối đến cơ sở dữ liệu
+  include_once("config.php"); 
   include_once("header.php");
   function bind_Category_List($conn, $selectedValue)
   {
@@ -153,7 +153,7 @@
       <input type="button" value="Cancel" onclick="window.location='listpost.php'" />
     </form>
   <?php
-    if (isset($_POST["btnUpdate"])) { // Kiểm tra xem form đã được submit hay chưa
+    if (isset($_POST["btnUpdate"])) { 
       $title = $_POST["title"];
       $category = $_POST['CategoryList'];
       $date_ending = $_POST['enddate'];
@@ -168,7 +168,7 @@
       content='$content',
       category_Id = '$category'
       where post_Id ='$id'";
-      if (mysqli_query($conn, $sqlstring)) { // Thực hiện truy vấn SQL để thêm sản phẩm mới vào cơ sở dữ liệu
+      if (mysqli_query($conn, $sqlstring)) { 
         echo "<script>
         $(document).ready(function() { 
         swal({
