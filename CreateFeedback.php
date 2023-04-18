@@ -133,7 +133,7 @@
       });
       </script>";
     } else {
-      echo "Lỗi: " . mysqli_error($conn);
+      echo "Errorr: " . mysqli_error($conn);
     }
   }
   ?>
