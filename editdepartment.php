@@ -90,14 +90,12 @@
 	<?php }?>
 	</form>
 <?php
-			// Kết nối cơ sở dữ liệu
 			include_once("config.php");
 			// Kiểm tra kết nối
 			if (!$conn) {
 				die("Connection failed: " . mysqli_connect_error());
 			}
 
-			// Nếu người dùng bấm nút lưu
 			if (isset($_POST['btnUpdate'])) {
 				$name = $_POST['departmentName'];
 				$sql = "UPDATE tbl_department SET departmentName='$name' WHERE department_Id = '$id'";
@@ -116,7 +114,6 @@
 					echo "Error updating record: " . mysqli_error($conn);
 				}
 			}
-		// Sửa nút update
 		mysqli_close($conn);
 ?>
 
