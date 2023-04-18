@@ -84,7 +84,7 @@
 <body>
   <?php
   include_once "header.php";
-  include_once("config.php"); // Kết nối đến cơ sở dữ liệu
+  include_once("config.php");
   function bind_Department_List($conn, $selectedValue)
   {
     $sqlString = "SELECT * from tbl_department";
