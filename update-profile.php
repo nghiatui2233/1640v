@@ -177,7 +177,6 @@
         WHERE email ='$username'";
 
       if (mysqli_query($conn, $sqlstring)) {
-        // Hiển thị thông báo thành công
 echo "<script>
 	$(document).ready(function() { 
 	swal({
@@ -189,9 +188,8 @@ echo "<script>
 	});
 	</script>";
       } else {
-        // Hiển thị thông báo lỗi
         echo "<script>
-          alert('Đã xảy ra lỗi');
+          alert('Error');
         </script>";
       }
     }
