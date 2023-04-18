@@ -148,7 +148,7 @@ $count = $count_active = mysqli_num_rows($result) + $count_active1 = mysqli_num_
                                     <span class="text">"<?php echo $list_rows['content']; ?>"</span>
                                                                        <span class="time">
                                         <?php
-                                        date_default_timezone_set('Asia/Ho_Chi_Minh'); // Đặt múi giờ thành giờ của Việt Nam
+                                        date_default_timezone_set('Asia/Ho_Chi_Minh');
                                         $saved_time = $list_rows['date_comment'];
                                         $saved_timestamp = strtotime($saved_time);
                                         $time_diff = time() - $saved_timestamp;
