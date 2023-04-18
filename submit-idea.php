@@ -24,12 +24,10 @@
     /* Cho phép ấn khi sáng màu */
   }
 
-  /* Ẩn checkbox mặc định */
   input[type="checkbox"] {
     display: none;
   }
 
-  /* Tạo hình vuông tùy chỉnh */
   .checkbox {
     display: inline-block;
     width: 16px;
@@ -42,7 +40,6 @@
     margin-right: 5px;
   }
 
-  /* Hiển thị checkmark khi checkbox được check */
   .checkbox::after {
     content: "";
     display: block;
@@ -57,18 +54,15 @@
     visibility: hidden;
   }
 
-  /* Sáng màu checkbox khi được hover */
   .checkbox:hover {
     background-color: #e0e0e0;
   }
 
-  /* Sáng màu checkbox khi được check */
   input[type="checkbox"]:checked+.checkbox {
     background-color: #007bff;
     border-color: #007bff;
   }
 
-  /* Hiển thị checkmark khi checkbox được check */
   input[type="checkbox"]:checked+.checkbox::after {
     visibility: visible;
   }
@@ -179,29 +173,23 @@ if (isset($_GET['id'])) {
   </div>
 <?php }
 
-// Kiểm tra xem biểu mẫu đã được gửi đi chưa
 if (isset($_POST['postIdea'])) {
 
-  // Lấy thông tin file
   $file_name = $_FILES['file']['name'];
   $temp_file = $_FILES['file']['tmp_name'];
   $file_size = $_FILES['file']['size'];
   $file_type = $_FILES['file']['type'];
 
-  // Đường dẫn lưu file trên server
   $target_dir = "uploads/";
   $target_file = $target_dir . basename($file_name);
 
-  // Mảng các loại file được phép tải lên
   $allowed_types = array(
     'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/pdf', 'text/plain',
     'application/msword', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
   );
 
 
-  // Di chuyển file từ thư mục tạm đến thư mục lưu trữ trên server
   if (move_uploaded_file($temp_file, $target_file)) {
-    // Lấy các giá trị từ biểu mẫu
     $anonymous = $_POST['anonymous'];
     $feedback = $_POST['feedback'];
     $file_mime_type = mime_content_type($target_file);
@@ -217,7 +205,6 @@ if (isset($_POST['postIdea'])) {
       });
       </script>";
     } else {
-      // Thêm thông tin vào cơ sở dữ liệu
       $sql = "INSERT INTO tbl_feedback (post_Id, anonymous, feedback, file_name, file_path, department_Id, account_Id, likes) 
     VALUES ('$id', '$anonymous', '$feedback', '$file_name', '$target_file', '$department', '$account', '0')";
 
@@ -237,7 +224,6 @@ if (isset($_POST['postIdea'])) {
     $anonymous = $_POST['anonymous'];
     $feedback = $_POST['feedback'];
 
-    // Thêm thông tin vào cơ sở dữ liệu
     $sql = "INSERT INTO tbl_feedback (post_Id, anonymous, feedback, department_Id, account_Id, likes) 
     VALUES ('$id', '$anonymous', '$feedback', '$department', '$account', '0')";
 
@@ -255,7 +241,6 @@ if (isset($_POST['postIdea'])) {
     }
   }
 
-  // Đóng kết nối đến cơ sở dữ liệu
   mysqli_close($conn);
 }
 ?>
