@@ -64,7 +64,6 @@ if (isset($_GET['logout'])) {
     img {
       width: 120px;
 
-      /* Độ rộng của hình ảnh */
       height: 40px;
       display: block;
       margin: 0 auto;
@@ -74,9 +73,6 @@ if (isset($_GET['logout'])) {
 </head>
 
 <body onload="time()">
-  <!-- <script>
-        swal("Hi Admin", "Have a good day!", "");
-    </script> -->
   <?php
   if (isset($_SESSION['admin']) && $_SESSION['admin'] == 1) { ?>
     <nav class="navbar navbar-default navbar-fixed-top">
