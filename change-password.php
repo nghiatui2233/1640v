@@ -103,37 +103,34 @@
 
 <body>
     <?php
-    session_start(); // Bắt đầu phiên làm việc
+    session_start(); 
     include_once "header.php";
-    include_once("config.php"); // Kết nối đến cơ sở dữ liệu
+    include_once("config.php");
 
     // Kiểm tra đăng nhập
     if (!isset($_SESSION['username'])) {
-        header('Location: login.php'); // Chuyển hướng đến trang đăng nhập
+        header('Location: login.php');
         exit();
     }
 
     $username = $_SESSION['username'];
 
-    if (isset($_POST["btnUpdate"])) { // Kiểm tra xem form đã được submit hay chưa
+    if (isset($_POST["btnUpdate"])) {
         $password = $_POST["password"];
 
         // Kiểm tra mật khẩu
         if (strlen($password) < 6) {
             echo "<script>
-        alert('Mật khẩu phải chứa ít nhất 6 ký tự');
+        alert('Password must contain at least 6 characters');
         </script>";
         } else {
-            // Mã hóa mật khẩu
             $pass = md5($password);
 
-            // Cập nhật mật khẩu trong cơ sở dữ liệu
             $sqlstring = "UPDATE tbl_account SET 
         password='$pass'
         WHERE email ='$username'";
 
             if (mysqli_query($conn, $sqlstring)) {
-                // Hiển thị thông báo thành công
                 echo "
         <script>
           swal({
@@ -144,9 +141,8 @@
           })
         </script>";
             } else {
-                // Hiển thị thông báo lỗi
                 echo "<script>
-          alert('Đã xảy ra lỗi khi cập nhật mật khẩu');
+          alert('An error occurred while updating the password');
         </script>";
             }
         }
