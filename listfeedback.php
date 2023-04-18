@@ -227,13 +227,12 @@ ORDER BY tbl_feedback.likes DESC
 <script>
     const btn = document.querySelector('.scroll-btn');
     window.addEventListener('scroll', function() {
-        // tính toán vị trí mới của nút
+
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const btnTop = document.documentElement.scrollHeight - document.documentElement.clientHeight - 100;
         const progress = scrollTop / btnTop;
         const newPos = Math.max(0, Math.min(1, progress)) * 0;
 
-        // cập nhật vị trí của nút
         btn.style.transform = `translateY(-${newPos}%)`;
     });
 </script>
