@@ -104,11 +104,10 @@
 
 <body>
   <?php
-  session_start(); // Bắt đầu phiên làm việc
+  session_start(); 
   include_once "header.php";
-  include_once("config.php"); // Kết nối đến cơ sở dữ liệu
+  include_once("config.php"); 
 
-  // Kiểm tra đăng nhập
   if (isset($_SESSION['username'])) {
     $username = $_SESSION['username'];
     $query = mysqli_query($conn, "SELECT * from tbl_account where email='$username' ");
@@ -162,14 +161,13 @@
       <input type="button" value="Cancel" onclick="window.location='index.php'" />
     </form>
   <?php
-    if (isset($_POST["btnUpdate"])) { // Kiểm tra xem form đã được submit hay chưa
+    if (isset($_POST["btnUpdate"])) {
       $fullname = $_POST['fullname'];
       $gender = $_POST['gender'];
       $address = $_POST['address'];
       $phone = $_POST['phonenumber'];
       $date_of_birth = $_POST['birthdaytime'];
 
-      // Cập nhật mật khẩu trong cơ sở dữ liệu
       $sqlstring = "UPDATE tbl_account SET 
         fullname='$fullname',
         gender='$gender',
@@ -198,7 +196,7 @@ echo "<script>
       }
     }
   } else {
-    header('Location: login.php'); // Chuyển hướng đến trang đăng nhập
+    header('Location: login.php');
     exit();
   }
   ?>
