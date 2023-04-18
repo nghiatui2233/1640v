@@ -91,8 +91,7 @@
 	</form>
 <?php
 			include_once("config.php");
-			// Kiểm tra kết nối
-			if (!$conn) {
+		if (!$conn) {
 				die("Connection failed: " . mysqli_connect_error());
 			}
 
